@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func getTredingTravelPosts() {
-        let url = URL(string: "https://api.steemjs.com/get_discussions_by_trending?query=%7B%22tag%22%3A%22travel%22%2C%20%22limit%22%3A%20%2202%22%7D")!
+        let url = URL(string: "https://api.steemjs.com/get_discussions_by_trending?query=%7B%22tag%22%3A%22travel%22%2C%20%22limit%22%3A%20%2210%22%7D")!
         URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
             if(error != nil){

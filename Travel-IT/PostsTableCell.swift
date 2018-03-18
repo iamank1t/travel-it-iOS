@@ -31,10 +31,11 @@ class PostsTableCell: UITableViewCell {
         do {
             if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
             {
-                let images = jsonArray["image"] as! [String]
+                if let images = jsonArray["image"] as? [String] {
                 let finalImage = images[0]
                 if let url = URL(string: finalImage) {
                     postMainImage.sd_setImage(with: url)
+                }
                 }
             } else {
                 print("bad json")
