@@ -1,0 +1,6 @@
+framework module Pods_Travel_ITUITests {
+  umbrella header "Pods-Travel-ITUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
