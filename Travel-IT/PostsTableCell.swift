@@ -22,6 +22,7 @@ class PostsTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     // function to update single cell data
     func updateCellData(data: [String: AnyObject]) {
         self.postTitle.text = data["title"]! as! String
