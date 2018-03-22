@@ -26,6 +26,19 @@ class PostShowVC: UIViewController {
         }
         let postBody = postData["body"]! as! String
         self.postBodyLabel.text = postBody.html2String
+        self.fetchUrls(bodyData: postBody.html2String)
+    }
+    
+    func fetchUrls(bodyData: String) {
+    let input = bodyData
+    let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+    let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
+    
+    for match in matches {
+    guard let range = Range(match.range, in: input) else { continue }
+    let url = input[range]
+    print(url)
+    }
     }
     
     override func didReceiveMemoryWarning() {

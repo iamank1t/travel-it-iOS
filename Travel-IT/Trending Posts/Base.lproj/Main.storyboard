@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tEc-7b-BcC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhq-Hb-YXe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
         </array>
         <array key="KannadaSangamMN.ttc">
             <string>KannadaSangamMN-Bold</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Trending Posts-->
         <scene sceneID="b8k-I0-Ynm">
             <objects>
-                <navigationController id="tEc-7b-BcC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CustomNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tEc-7b-BcC" customClass="CustomNavigationVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trending Posts" id="iiv-wT-fgp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Wt-9R-OU9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,6 +34,23 @@
             </objects>
             <point key="canvasLocation" x="-463" y="-230"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pY4-3h-eEX">
+            <objects>
+                <tabBarController id="zhq-Hb-YXe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GKP-rj-X8I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tEc-7b-BcC" kind="relationship" relationship="viewControllers" id="L68-iS-mW8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ky4-Pi-Zgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1104" y="-231"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="XkY-nI-hbr">
             <objects>
@@ -43,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iCR-U0-tNm">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostsTableCell" rowHeight="265" id="jV3-qU-d4c" customClass="PostsTableCell" customModule="Travel_IT" customModuleProvider="target">
@@ -117,7 +134,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LSR-7R-b5U"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mx7-y0-xFR"/>
+                    <navigationItem key="navigationItem" id="mx7-y0-xFR">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LsA-wS-gcp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="travelpostsTableView" destination="iCR-U0-tNm" id="Ggh-0c-kkS"/>
                         <segue destination="YQA-Y2-BM1" kind="show" identifier="postShowSegue" id="0u6-wE-cUz"/>
@@ -125,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da0-e6-Lro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="-233.43328335832086"/>
+            <point key="canvasLocation" x="262" y="-231"/>
         </scene>
         <!--Post ShowVC-->
         <scene sceneID="kwi-0s-eLJ">
@@ -136,7 +155,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-8h-KRT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrH-BN-vRu" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -148,8 +167,9 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSG-Ry-JDr">
-                                                <rect key="frame" x="5" y="215" width="365" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <rect key="frame" x="5" y="225" width="365" height="22"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -158,7 +178,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="603" id="4jg-0Y-Jlx"/>
                                             <constraint firstItem="PSG-Ry-JDr" firstAttribute="leading" secondItem="IrH-BN-vRu" secondAttribute="leading" constant="5" id="EhV-CN-9cD"/>
-                                            <constraint firstItem="PSG-Ry-JDr" firstAttribute="top" secondItem="Z6g-KM-MNN" secondAttribute="bottom" constant="10" id="LtM-WJ-kbU"/>
+                                            <constraint firstItem="PSG-Ry-JDr" firstAttribute="top" secondItem="Z6g-KM-MNN" secondAttribute="bottom" constant="20" id="LtM-WJ-kbU"/>
                                             <constraint firstAttribute="trailing" secondItem="PSG-Ry-JDr" secondAttribute="trailing" constant="5" id="Oj6-vt-GdD"/>
                                             <constraint firstItem="Z6g-KM-MNN" firstAttribute="top" secondItem="IrH-BN-vRu" secondAttribute="top" constant="25" id="Pnh-0K-jPp"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PSG-Ry-JDr" secondAttribute="bottom" constant="20" id="Y1a-qN-Z1m"/>
@@ -195,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haq-wl-bRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232.8" y="-249.62518740629687"/>
+            <point key="canvasLocation" x="924" y="-231"/>
         </scene>
     </scenes>
 </document>
