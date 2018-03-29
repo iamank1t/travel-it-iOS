@@ -11,7 +11,7 @@ Currently Travel-it is in it's early phase, in early phase Travel-it provides yo
 # Features added in upcoming days :-
 I will add some of these features immediately in app, maybe in one week or less.
 - ~~Activity Loader~~
-- ~~Nice Logo ~~
+- ~~Nice Logo~~
 - Well improved UI
 - Improved UX
 - Show posts with date and upvotes.
