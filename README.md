@@ -10,13 +10,13 @@ Currently Travel-it is in it's early phase, in early phase Travel-it provides yo
 
 # Features added in upcoming days :-
 I will add some of these features immediately in app, maybe in one week or less.
-- Activity Loader
-- Nice Logo
+~~- Activity Loader~~
+~~- Nice Logo ~~
 - Well improved UI
 - Improved UX
 - Show posts with date and upvotes.
 - Showing all images of posts, currently it's showing only one image.
-- Top 10 posts from Hot section.
+~~- Top 10 posts from Hot section.~~
 - Steemconnect Login for users.
 - Users can upvote, comment their favourite posts directly from app.
 - Users can see authors Steemit profile in app.
