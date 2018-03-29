@@ -15,7 +15,8 @@ class CustomNavigationVC: UINavigationController {
         let backImage = UIImage(named: "Back")
         self.navigationBar.isTranslucent = true
         self.navigationBar.backIndicatorImage = backImage
-        self.navigationBar.tintColor = UIColor.blue
+        self.navigationBar.tintColor = UIColor.black
+        self.navigationBar.barTintColor = UIColor.loaderColor
         self.navigationBar.backIndicatorTransitionMaskImage = backImage
         self.navigationBar.topItem?.title = " "
 //        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Avenir-Next-Regular", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.blue]

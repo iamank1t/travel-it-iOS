@@ -10,11 +10,18 @@ import UIKit
 import SDWebImage
 class PostsTableCell: UITableViewCell {
 
+    @IBOutlet var postCardView: UIView!
     @IBOutlet var postMainImage: UIImageView!
     @IBOutlet var postTitle: UILabel!
     @IBOutlet var authorNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.postCardView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.postCardView.layer.shadowColor = UIColor.black.cgColor
+        self.postCardView.layer.shadowRadius = 4
+        self.postCardView.layer.shadowOpacity = 0.25
+        self.postCardView.layer.masksToBounds = false;
+        self.postCardView.clipsToBounds = false;
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

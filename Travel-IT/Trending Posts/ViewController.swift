@@ -8,10 +8,14 @@
 
 import UIKit
 import SwiftyJSON
+import NVActivityIndicatorView
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    private var activityView: NVActivityIndicatorView!
     @IBOutlet var travelpostsTableView: UITableView!
     var allPosts = [[String: AnyObject]]()
+    // variable to check data loaded or not in tableview
+    var dataLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Trending Travel Posts"
@@ -21,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func getTredingTravelPosts() {
+        self.showLoadingIndicator()
         let url = URL(string: "https://api.steemjs.com/get_discussions_by_trending?query=%7B%22tag%22%3A%22travel%22%2C%20%22limit%22%3A%20%2210%22%7D")!
         URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
@@ -33,6 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         self.allPosts.append(post)
                     }
                     DispatchQueue.main.async(execute: {
+                    self.dataLoad = true
+                    self.stopLoadingIndicator()
                     self.travelpostsTableView.reloadData()
                     })
                 }catch let error as NSError{
@@ -79,5 +86,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         vc.postMainImage = mainImage
         navigationController?.pushViewController(vc,animated: true)
     }
+    
+    func showLoadingIndicator(){
+        if activityView == nil{
+            activityView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50.0, height: 50.0), type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.loaderColor, padding: 0.0)
+            // add subview
+            view.addSubview(activityView)
+            // autoresizing mask
+            activityView.translatesAutoresizingMaskIntoConstraints = false
+            // constraints
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        }
+        
+        activityView.startAnimating()
+    }
+    
+    func stopLoadingIndicator(){
+        activityView.stopAnimating()
+    }
 }
-
