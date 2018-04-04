@@ -13,7 +13,7 @@
         <scene sceneID="vJM-GD-3II">
             <objects>
                 <navigationController storyboardIdentifier="CustomNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uZ7-xx-JAn" customClass="CustomNavigationVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Useful Tools" image="icon_2" selectedImage="icon_2" id="qZE-U0-avx"/>
+                    <tabBarItem key="tabBarItem" title="Useful Tools" image="Useful Tools" selectedImage="Useful Tools" id="qZE-U0-avx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wMz-0Y-xZd">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -68,6 +68,6 @@
     </scenes>
     <resources>
         <image name="Group" width="945" height="750"/>
-        <image name="icon_2" width="39" height="29"/>
+        <image name="Useful Tools" width="28" height="28"/>
     </resources>
 </document>

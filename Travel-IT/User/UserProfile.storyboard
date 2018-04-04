@@ -13,7 +13,7 @@
         <scene sceneID="H7o-lu-l3k">
             <objects>
                 <navigationController storyboardIdentifier="CustomNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qEH-Ex-920" customClass="CustomNavigationVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User Profile" image="icon_2" selectedImage="icon_2" id="hPt-3h-9T1"/>
+                    <tabBarItem key="tabBarItem" title="User Profile" image="User Profile" selectedImage="User Profile" id="hPt-3h-9T1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZg-HJ-nON">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -68,6 +68,6 @@
     </scenes>
     <resources>
         <image name="Group" width="945" height="750"/>
-        <image name="icon_2" width="39" height="29"/>
+        <image name="User Profile" width="28" height="28"/>
     </resources>
 </document>

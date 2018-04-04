@@ -21,7 +21,7 @@
         <scene sceneID="khZ-Nw-YMe">
             <objects>
                 <navigationController storyboardIdentifier="CustomNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FDl-8o-VO4" customClass="CustomNavigationVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hot Travel Posts" image="icon_2" selectedImage="icon_2" id="wWS-eM-8Yk"/>
+                    <tabBarItem key="tabBarItem" title="Hot Travel Posts" image="Hot Travel Posts" selectedImage="Hot Travel Posts" id="wWS-eM-8Yk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="01I-Y3-Qzn">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -218,6 +218,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_2" width="39" height="29"/>
+        <image name="Hot Travel Posts" width="9" height="9"/>
     </resources>
 </document>

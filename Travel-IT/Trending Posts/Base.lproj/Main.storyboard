@@ -17,11 +17,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Trending Posts-->
+        <!--Custom NavigationVC-->
         <scene sceneID="b8k-I0-Ynm">
             <objects>
                 <navigationController storyboardIdentifier="CustomNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tEc-7b-BcC" customClass="CustomNavigationVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trending Posts" image="icon_1" selectedImage="icon_1" id="iiv-wT-fgp"/>
+                    <tabBarItem key="tabBarItem" title="" image="Trending Travel Posts" selectedImage="Trending Travel Posts" id="iiv-wT-fgp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Wt-9R-OU9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -251,7 +251,7 @@
         <scene sceneID="0KZ-l1-xy7">
             <objects>
                 <viewControllerPlaceholder storyboardName="HotPosts" id="Oyo-47-xmm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hot Posts" image="icon_2" selectedImage="icon_2" id="TBn-L1-8V8"/>
+                    <tabBarItem key="tabBarItem" title="Hot Posts" image="Hot Travel Posts" selectedImage="Hot Travel Posts" id="TBn-L1-8V8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwy-Ak-dp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +261,7 @@
         <scene sceneID="zXz-4s-heM">
             <objects>
                 <viewControllerPlaceholder storyboardName="Tools" id="NI4-kk-Yt9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tools" image="icon_2" selectedImage="icon_2" id="wo9-sr-p7P"/>
+                    <tabBarItem key="tabBarItem" title="Tools" image="Useful Tools" selectedImage="Useful Tools" id="wo9-sr-p7P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68u-gc-nbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,7 +271,7 @@
         <scene sceneID="wZP-CV-xiA">
             <objects>
                 <viewControllerPlaceholder storyboardName="UserProfile" id="eJI-ny-zy1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User Profile" image="icon_2" selectedImage="icon_2" id="Re6-z4-rcu"/>
+                    <tabBarItem key="tabBarItem" title="User Profile" image="User Profile" selectedImage="User Profile" id="Re6-z4-rcu"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyC-Dt-s6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +279,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_1" width="39" height="27"/>
-        <image name="icon_2" width="39" height="29"/>
+        <image name="Hot Travel Posts" width="9" height="9"/>
+        <image name="Trending Travel Posts" width="30" height="30"/>
+        <image name="Useful Tools" width="28" height="28"/>
+        <image name="User Profile" width="28" height="28"/>
     </resources>
 </document>
