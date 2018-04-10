@@ -35,8 +35,13 @@ class PostsTableCell: UITableViewCell {
     
     // function to update single cell data
     func updateCellData(data: [String: AnyObject]) {
-        self.postTitle.text = data["title"]! as! String
-        self.authorNameLabel.text = data["author"] as! String
+        self.postTitle.text = data["title"]! as? String
+        self.authorNameLabel.text = data["author"] as? String
+        let upvoteCount = data["net_votes"] as? Int
+        self.upvoteCountLabel.text = "\(upvoteCount ?? 0)"
+        let commentCount = data["children"] as? Int
+        self.commentCountLabel.text = "\(commentCount ?? 0)"
+        self.moneyLabel.text = data["pending_payout_value"] as? String
         let metadata = data["json_metadata"]! as! String
         let data = metadata.data(using: .utf8)!
         do {
