@@ -10,6 +10,9 @@ import UIKit
 import SDWebImage
 class PostsTableCell: UITableViewCell {
 
+    @IBOutlet var commentCountLabel: UILabel!
+    @IBOutlet var moneyLabel: UILabel!
+    @IBOutlet var upvoteCountLabel: UILabel!
     @IBOutlet var postCardView: UIView!
     @IBOutlet var postMainImage: UIImageView!
     @IBOutlet var postTitle: UILabel!

@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 265
+        return 320
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
