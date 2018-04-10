@@ -148,8 +148,11 @@
                                         <connections>
                                             <outlet property="authorNameLabel" destination="IKB-qc-fXD" id="4pR-hh-K0t"/>
                                             <outlet property="hotPostCellMainView" destination="JDp-wd-e6Z" id="HQb-pD-Yox"/>
+                                            <outlet property="postCommentsCountLabel" destination="9PJ-Q8-g7J" id="TQX-Vr-vNq"/>
                                             <outlet property="postMainImage" destination="cHe-74-f4C" id="w0i-m6-S9p"/>
+                                            <outlet property="postMoneyLabel" destination="gbu-xl-pOm" id="1KV-wf-iVh"/>
                                             <outlet property="postTitle" destination="vGx-os-W8f" id="yLV-S6-JU7"/>
+                                            <outlet property="postUpvotesCountLabel" destination="iET-A8-JIa" id="8y7-2U-GLX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
