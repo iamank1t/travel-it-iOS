@@ -12,7 +12,7 @@ class UsefulSteemitToolsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Useful Steem Tools"
         // Do any additional setup after loading the view.
     }
 

@@ -20,6 +20,7 @@
 		14A724D12063D7BA00A9BE47 /* CustomNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A724D02063D7BA00A9BE47 /* CustomNavigationVC.swift */; };
 		14A724D32063DCD100A9BE47 /* CustomTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A724D22063DCD100A9BE47 /* CustomTabbarVC.swift */; };
 		14A724D52063DD0400A9BE47 /* BaseColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A724D42063DD0400A9BE47 /* BaseColours.swift */; };
+		14B0B8C8207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0B8C7207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift */; };
 		14E6026B20652233006BAFCF /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6026A20652233006BAFCF /* Tools.storyboard */; };
 		14E6026D20652242006BAFCF /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E6026C20652242006BAFCF /* UserProfile.storyboard */; };
 		14E6026F206522C3006BAFCF /* UsefulSteemitToolsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6026E206522C3006BAFCF /* UsefulSteemitToolsVC.swift */; };
@@ -71,6 +72,7 @@
 		14A724D02063D7BA00A9BE47 /* CustomNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationVC.swift; sourceTree = "<group>"; };
 		14A724D22063DCD100A9BE47 /* CustomTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarVC.swift; sourceTree = "<group>"; };
 		14A724D42063DD0400A9BE47 /* BaseColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColours.swift; sourceTree = "<group>"; };
+		14B0B8C7207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingPowerRechargeTimeCalculatorVC.swift; sourceTree = "<group>"; };
 		14E6026A20652233006BAFCF /* Tools.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tools.storyboard; sourceTree = "<group>"; };
 		14E6026C20652242006BAFCF /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		14E6026E206522C3006BAFCF /* UsefulSteemitToolsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulSteemitToolsVC.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			children = (
 				14E6026A20652233006BAFCF /* Tools.storyboard */,
 				14E6026E206522C3006BAFCF /* UsefulSteemitToolsVC.swift */,
+				14B0B8C7207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				14E6027320652A5D006BAFCF /* HotPostsListVC.swift in Sources */,
 				14E6027F2067B6A5006BAFCF /* UIView+Properties.swift in Sources */,
 				147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */,
+				14B0B8C8207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift in Sources */,
 				147B5105205CFD1A001424D2 /* PostsTableCell.swift in Sources */,
 				147B5107205D6106001424D2 /* PostShowVC.swift in Sources */,
 				14E60271206524A3006BAFCF /* UserProfileVC.swift in Sources */,
