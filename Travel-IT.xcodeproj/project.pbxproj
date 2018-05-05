@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		141709F020843958002E7F68 /* SteemGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141709EF20843958002E7F68 /* SteemGuide.storyboard */; };
 		141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141709F1208439AC002E7F68 /* SteemGuidVC.swift */; };
+		14660727209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */; };
 		147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D6205CEA44001424D2 /* AppDelegate.swift */; };
 		147B50D9205CEA44001424D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D8205CEA44001424D2 /* ViewController.swift */; };
 		147B50DC205CEA44001424D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B50DA205CEA44001424D2 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		0414ED727009D50E6981CC27 /* Pods-Travel-IT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel-IT.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT.release.xcconfig"; sourceTree = "<group>"; };
 		141709EF20843958002E7F68 /* SteemGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SteemGuide.storyboard; sourceTree = "<group>"; };
 		141709F1208439AC002E7F68 /* SteemGuidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteemGuidVC.swift; sourceTree = "<group>"; };
+		14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVotingPowerCalculatorVC.swift; sourceTree = "<group>"; };
 		147B50D3205CEA44001424D2 /* Travel-IT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel-IT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B50D6205CEA44001424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147B50D8205CEA44001424D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				14E6026A20652233006BAFCF /* Tools.storyboard */,
 				14E6026E206522C3006BAFCF /* UsefulSteemitToolsVC.swift */,
 				14B0B8C7207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift */,
+				14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				147B5105205CFD1A001424D2 /* PostsTableCell.swift in Sources */,
 				147B5107205D6106001424D2 /* PostShowVC.swift in Sources */,
 				14E60271206524A3006BAFCF /* UserProfileVC.swift in Sources */,
+				14660727209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift in Sources */,
 				14A724D32063DCD100A9BE47 /* CustomTabbarVC.swift in Sources */,
 				14E6026F206522C3006BAFCF /* UsefulSteemitToolsVC.swift in Sources */,
 				14E6027520652BBF006BAFCF /* HotPostShowVC.swift in Sources */,

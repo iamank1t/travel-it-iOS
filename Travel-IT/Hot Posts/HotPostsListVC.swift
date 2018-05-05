@@ -86,6 +86,7 @@ class HotPostsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func showLoadingIndicator(){
         if activityView == nil{
             activityView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50.0, height: 50.0), type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.loaderColor, padding: 0.0)
+            activityView.backgroundColor = UIColor.white
             // add subview
             view.addSubview(activityView)
             // autoresizing mask

@@ -107,12 +107,81 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kf6-jS-fNl" customClass="DesignableView" customModule="Travel_IT" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="195" width="355" height="170"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Voting Power Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgW-X7-ZhX">
+                                                        <rect key="frame" x="47" y="15" width="261" height="25"/>
+                                                        <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This tools helps you in current voting power of your steemit account or others account like voting bots etc.." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGD-6O-PsU">
+                                                        <rect key="frame" x="20" y="41.5" width="315" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mS-7R-11a" customClass="DesignableButton" customModule="Travel_IT" customModuleProvider="target">
+                                                        <rect key="frame" x="102.5" y="117.5" width="150" height="40"/>
+                                                        <color key="backgroundColor" red="0.4039215686" green="0.74901960779999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="0mH-lH-d7F"/>
+                                                            <constraint firstAttribute="width" constant="150" id="i41-ug-fcm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <state key="normal" title="Check It">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="jYI-qT-3k5" kind="show" id="OJO-Q4-AWR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="rgW-X7-ZhX" firstAttribute="top" secondItem="Kf6-jS-fNl" secondAttribute="top" constant="15" id="1fM-Ys-Qsb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hGD-6O-PsU" secondAttribute="trailing" constant="20" id="HJS-Y2-TSA"/>
+                                                    <constraint firstItem="hGD-6O-PsU" firstAttribute="leading" secondItem="Kf6-jS-fNl" secondAttribute="leading" constant="20" id="Ib8-uR-wU6"/>
+                                                    <constraint firstItem="hGD-6O-PsU" firstAttribute="centerX" secondItem="Kf6-jS-fNl" secondAttribute="centerX" id="N8c-Q2-Efs"/>
+                                                    <constraint firstItem="rgW-X7-ZhX" firstAttribute="centerX" secondItem="Kf6-jS-fNl" secondAttribute="centerX" id="ZMd-Zn-jMT"/>
+                                                    <constraint firstItem="9mS-7R-11a" firstAttribute="top" secondItem="hGD-6O-PsU" secondAttribute="bottom" constant="15" id="aHz-PK-apW"/>
+                                                    <constraint firstItem="hGD-6O-PsU" firstAttribute="top" secondItem="rgW-X7-ZhX" secondAttribute="bottom" constant="2" id="iE7-lP-32z"/>
+                                                    <constraint firstItem="9mS-7R-11a" firstAttribute="centerX" secondItem="Kf6-jS-fNl" secondAttribute="centerX" id="iEp-Xk-mdW"/>
+                                                    <constraint firstAttribute="height" constant="170" id="lQz-lC-lDS"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="1" height="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="1" alpha="0.54030866560000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="fZB-OZ-Sxf" secondAttribute="trailing" constant="10" id="2FD-8n-8kl"/>
+                                            <constraint firstItem="Kf6-jS-fNl" firstAttribute="leading" secondItem="iJw-A3-ixL" secondAttribute="leading" constant="10" id="3on-aY-ysm"/>
                                             <constraint firstItem="fZB-OZ-Sxf" firstAttribute="top" secondItem="iJw-A3-ixL" secondAttribute="top" constant="15" id="FcE-nn-soN"/>
                                             <constraint firstItem="fZB-OZ-Sxf" firstAttribute="leading" secondItem="iJw-A3-ixL" secondAttribute="leading" constant="10" id="Kd2-EF-RMg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kf6-jS-fNl" secondAttribute="trailing" constant="10" id="Tbx-k0-iDQ"/>
+                                            <constraint firstItem="Kf6-jS-fNl" firstAttribute="top" secondItem="fZB-OZ-Sxf" secondAttribute="bottom" constant="10" id="eZB-Db-Xdf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -282,9 +351,117 @@
             </objects>
             <point key="canvasLocation" x="-896" y="-1909"/>
         </scene>
+        <!--Current Voting Power CalculatorVC-->
+        <scene sceneID="osf-IR-yf5">
+            <objects>
+                <viewController id="jYI-qT-3k5" customClass="CurrentVotingPowerCalculatorVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jCe-7J-gPU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upvote" translatesAutoresizingMaskIntoConstraints="NO" id="Bzo-Ve-qu3">
+                                <rect key="frame" x="67" y="94" width="240" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="OW4-n5-aHd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Voting Power Calculator" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-RC-OPR">
+                                <rect key="frame" x="69" y="193" width="237" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter account username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHQ-VA-HXI">
+                                <rect key="frame" x="16" y="280" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNa-qv-uhx" customClass="DesignableButton" customModule="Travel_IT" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="381" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.4039215686" green="0.74901960779999999" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6kN-4K-kIt"/>
+                                    <constraint firstAttribute="width" constant="150" id="yFB-xD-RhX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculateButtonClicked:" destination="jYI-qT-3k5" eventType="touchUpInside" id="HvR-9U-dMn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYk-RW-clZ">
+                                <rect key="frame" x="10" y="461.5" width="355" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXX-l2-DOf">
+                                <rect key="frame" x="20" y="331" width="15.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Voting Power of this account is:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Up-KXF">
+                                <rect key="frame" x="15" y="436" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbu-fE-rZe">
+                                <rect key="frame" x="35" y="326" width="320" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xHQ-VA-HXI" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="16" id="0Z1-VB-8wX"/>
+                            <constraint firstItem="rXX-l2-DOf" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="20" id="2Bt-DQ-4B4"/>
+                            <constraint firstItem="lYk-RW-clZ" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="10" id="3KW-nX-x2K"/>
+                            <constraint firstItem="gyP-Up-KXF" firstAttribute="top" secondItem="jNa-qv-uhx" secondAttribute="bottom" constant="15" id="9R4-f4-bRx"/>
+                            <constraint firstItem="d6y-9M-43l" firstAttribute="trailing" secondItem="lYk-RW-clZ" secondAttribute="trailing" constant="10" id="DhR-Lw-fip"/>
+                            <constraint firstItem="Bzo-Ve-qu3" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="67" id="Dsw-8b-Khd"/>
+                            <constraint firstItem="d6y-9M-43l" firstAttribute="trailing" secondItem="Bzo-Ve-qu3" secondAttribute="trailing" constant="68" id="EoI-E8-SPe"/>
+                            <constraint firstItem="Kbu-fE-rZe" firstAttribute="leading" secondItem="rXX-l2-DOf" secondAttribute="trailing" id="I8s-KA-eof"/>
+                            <constraint firstItem="xHQ-VA-HXI" firstAttribute="top" secondItem="BB7-RC-OPR" secondAttribute="bottom" constant="46" id="K5g-gP-tmK"/>
+                            <constraint firstItem="jNa-qv-uhx" firstAttribute="top" secondItem="Kbu-fE-rZe" secondAttribute="bottom" constant="25" id="KIW-Be-gWo"/>
+                            <constraint firstItem="lYk-RW-clZ" firstAttribute="top" secondItem="gyP-Up-KXF" secondAttribute="bottom" constant="5" id="UM4-31-k0W"/>
+                            <constraint firstItem="BB7-RC-OPR" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="69" id="YxK-ik-T1R"/>
+                            <constraint firstAttribute="trailing" secondItem="gyP-Up-KXF" secondAttribute="trailing" constant="15" id="bGR-cI-BcI"/>
+                            <constraint firstItem="d6y-9M-43l" firstAttribute="trailing" secondItem="xHQ-VA-HXI" secondAttribute="trailing" id="cVN-2Z-veC"/>
+                            <constraint firstItem="d6y-9M-43l" firstAttribute="trailing" secondItem="Kbu-fE-rZe" secondAttribute="trailing" constant="20" id="hJG-Rh-c3Q"/>
+                            <constraint firstItem="Bzo-Ve-qu3" firstAttribute="top" secondItem="d6y-9M-43l" secondAttribute="top" constant="30" id="j8j-Us-PML"/>
+                            <constraint firstItem="rXX-l2-DOf" firstAttribute="centerY" secondItem="Kbu-fE-rZe" secondAttribute="centerY" id="nlu-8Y-Bis"/>
+                            <constraint firstItem="BB7-RC-OPR" firstAttribute="top" secondItem="Bzo-Ve-qu3" secondAttribute="bottom" constant="8" id="ood-jI-6iv"/>
+                            <constraint firstItem="jNa-qv-uhx" firstAttribute="centerX" secondItem="jCe-7J-gPU" secondAttribute="centerX" id="sZ3-XI-Dab"/>
+                            <constraint firstItem="Kbu-fE-rZe" firstAttribute="top" secondItem="xHQ-VA-HXI" secondAttribute="bottom" constant="25" id="yeP-f0-CU3"/>
+                            <constraint firstItem="gyP-Up-KXF" firstAttribute="leading" secondItem="d6y-9M-43l" secondAttribute="leading" constant="15" id="ypx-7b-2lu"/>
+                            <constraint firstItem="d6y-9M-43l" firstAttribute="trailing" secondItem="BB7-RC-OPR" secondAttribute="trailing" constant="69" id="zBu-Gz-WEy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d6y-9M-43l"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountNameTextfield" destination="Kbu-fE-rZe" id="0z2-Ib-xEC"/>
+                        <outlet property="votingPowerLabel" destination="lYk-RW-clZ" id="Oa6-vE-dKA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTf-Lj-Q5Q" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1759.2" y="-1115.8920539730136"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Useful Tools" width="28" height="28"/>
         <image name="Voting_power_tool_logo" width="154" height="91"/>
+        <image name="upvote" width="200" height="200"/>
     </resources>
 </document>
