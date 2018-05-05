@@ -72,8 +72,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         do {
             if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
             {
-                let images = jsonArray["image"] as! [String]
+                if let images = jsonArray["image"] as? [String] {
                 mainImage = images[0]
+            }
             } else {
                 print("bad json")
             }
@@ -83,7 +84,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PostShowVC") as! PostShowVC
         vc.postData = postData
-        vc.postMainImage = mainImage
         navigationController?.pushViewController(vc,animated: true)
     }
     

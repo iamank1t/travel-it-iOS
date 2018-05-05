@@ -7,43 +7,52 @@
 //
 
 import UIKit
+import Down
+import NVActivityIndicatorView
 
 class PostShowVC: UIViewController {
+     private var activityView: NVActivityIndicatorView!
     var postData = [String:AnyObject]()
-    var postMainImage: String?
-    @IBOutlet var postMainImageView: UIImageView!
-    @IBOutlet var postBodyLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.postBodyLabel.numberOfLines = 0
         self.populatePostData()
         // Do any additional setup after loading the view.
     }
 
     func populatePostData() {
-        if let url = URL(string: postMainImage!) {
-            self.postMainImageView.sd_setImage(with: url)
-        }
+         self.showLoadingIndicator()
         let postBody = postData["body"]! as! String
-        self.postBodyLabel.text = postBody.html2String
-        self.fetchUrls(bodyData: postBody.html2String)
-    }
-    
-    func fetchUrls(bodyData: String) {
-    let input = bodyData
-    let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
-    let matches = detector.matches(in: input, options: [], range: NSRange(location: 0, length: input.utf16.count))
-    
-    for match in matches {
-    guard let range = Range(match.range, in: input) else { continue }
-    let url = input[range]
-    print(url)
-    }
+        guard let downView = try? DownView(frame: self.view.bounds, markdownString: postBody, didLoadSuccessfully: {
+            self.stopLoadingIndicator()
+            print("Markdown was rendered.")
+        }) else {
+            self.stopLoadingIndicator()
+            return }
+        view.addSubview(downView)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showLoadingIndicator(){
+        if activityView == nil{
+            activityView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50.0, height: 50.0), type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.loaderColor, padding: 0.0)
+            // add subview
+            view.addSubview(activityView)
+            // autoresizing mask
+            activityView.translatesAutoresizingMaskIntoConstraints = false
+            // constraints
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        }
+        
+        activityView.startAnimating()
+    }
+    
+    func stopLoadingIndicator(){
+        activityView.stopAnimating()
     }
 }
 

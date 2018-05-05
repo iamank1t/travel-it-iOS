@@ -9,6 +9,7 @@ target 'Travel-IT' do
 	pod ‘SwiftyJSON’
     pod 'SDWebImage', '~> 4.0'
     pod 'NVActivityIndicatorView'
+    pod 'Down'
   target 'Travel-ITTests' do
     inherit! :search_paths
     # Pods for testing

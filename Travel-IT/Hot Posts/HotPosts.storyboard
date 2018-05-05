@@ -56,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGx-os-W8f">
-                                                            <rect key="frame" x="5" y="207" width="335" height="22"/>
+                                                            <rect key="frame" x="10" y="207" width="325" height="22"/>
                                                             <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                                                         <constraint firstItem="zXv-YG-CJ4" firstAttribute="leading" secondItem="iET-A8-JIa" secondAttribute="trailing" constant="20" id="5Rk-G4-QVk"/>
                                                         <constraint firstItem="fvw-Ev-gTS" firstAttribute="leading" secondItem="JDp-wd-e6Z" secondAttribute="leading" constant="8" id="6Vv-IX-HKP"/>
                                                         <constraint firstItem="iET-A8-JIa" firstAttribute="leading" secondItem="fvw-Ev-gTS" secondAttribute="trailing" constant="5" id="BdS-Wm-vnm"/>
-                                                        <constraint firstAttribute="trailing" secondItem="vGx-os-W8f" secondAttribute="trailing" constant="5" id="CQt-SG-i8X"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vGx-os-W8f" secondAttribute="trailing" constant="10" id="CQt-SG-i8X"/>
                                                         <constraint firstItem="vGx-os-W8f" firstAttribute="top" secondItem="cHe-74-f4C" secondAttribute="bottom" constant="10" id="EWI-ka-HuL"/>
                                                         <constraint firstItem="cHe-74-f4C" firstAttribute="leading" secondItem="JDp-wd-e6Z" secondAttribute="leading" constant="5" id="GPS-KA-fSP"/>
                                                         <constraint firstAttribute="bottom" secondItem="fvw-Ev-gTS" secondAttribute="bottom" constant="10" id="Jui-fr-Mok"/>
@@ -125,7 +125,7 @@
                                                         <constraint firstItem="9PJ-Q8-g7J" firstAttribute="bottom" secondItem="gbu-xl-pOm" secondAttribute="bottom" id="hQA-N1-Zib"/>
                                                         <constraint firstItem="9PJ-Q8-g7J" firstAttribute="leading" secondItem="HsW-ts-jta" secondAttribute="trailing" constant="5" id="lXr-nS-Scd"/>
                                                         <constraint firstItem="IKB-qc-fXD" firstAttribute="leading" secondItem="JDp-wd-e6Z" secondAttribute="leading" constant="15" id="nMJ-bB-9Op"/>
-                                                        <constraint firstItem="vGx-os-W8f" firstAttribute="leading" secondItem="JDp-wd-e6Z" secondAttribute="leading" constant="5" id="oUi-On-n0E"/>
+                                                        <constraint firstItem="vGx-os-W8f" firstAttribute="leading" secondItem="JDp-wd-e6Z" secondAttribute="leading" constant="10" id="oUi-On-n0E"/>
                                                         <constraint firstItem="gbu-xl-pOm" firstAttribute="leading" secondItem="zXv-YG-CJ4" secondAttribute="trailing" constant="5" id="r5c-Td-0FI"/>
                                                         <constraint firstItem="HsW-ts-jta" firstAttribute="leading" secondItem="gbu-xl-pOm" secondAttribute="trailing" constant="20" id="zRz-pf-zkV"/>
                                                         <constraint firstItem="iET-A8-JIa" firstAttribute="centerY" secondItem="fvw-Ev-gTS" secondAttribute="centerY" constant="2" id="zxH-XG-cHB"/>

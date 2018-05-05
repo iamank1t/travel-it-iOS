@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141709F020843958002E7F68 /* SteemGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141709EF20843958002E7F68 /* SteemGuide.storyboard */; };
+		141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141709F1208439AC002E7F68 /* SteemGuidVC.swift */; };
 		147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D6205CEA44001424D2 /* AppDelegate.swift */; };
 		147B50D9205CEA44001424D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D8205CEA44001424D2 /* ViewController.swift */; };
 		147B50DC205CEA44001424D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147B50DA205CEA44001424D2 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		0414ED727009D50E6981CC27 /* Pods-Travel-IT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel-IT.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT.release.xcconfig"; sourceTree = "<group>"; };
+		141709EF20843958002E7F68 /* SteemGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SteemGuide.storyboard; sourceTree = "<group>"; };
+		141709F1208439AC002E7F68 /* SteemGuidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteemGuidVC.swift; sourceTree = "<group>"; };
 		147B50D3205CEA44001424D2 /* Travel-IT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel-IT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B50D6205CEA44001424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147B50D8205CEA44001424D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141709EE20843902002E7F68 /* Steem Guide */ = {
+			isa = PBXGroup;
+			children = (
+				141709EF20843958002E7F68 /* SteemGuide.storyboard */,
+				141709F1208439AC002E7F68 /* SteemGuidVC.swift */,
+			);
+			path = "Steem Guide";
+			sourceTree = "<group>";
+		};
 		147B50CA205CEA44001424D2 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 				14A724CC2063D13400A9BE47 /* Hot Posts */,
 				14E602682065220A006BAFCF /* Tools */,
 				14E6026920652219006BAFCF /* User */,
+				141709EE20843902002E7F68 /* Steem Guide */,
 				14A724CF2063D1AC00A9BE47 /* Extensions */,
 				147B50D6205CEA44001424D2 /* AppDelegate.swift */,
 				147B50DD205CEA44001424D2 /* Assets.xcassets */,
@@ -262,7 +276,6 @@
 				147B50D0205CEA44001424D2 /* Frameworks */,
 				147B50D1205CEA44001424D2 /* Resources */,
 				900A99E53FCFCAE0B5156552 /* [CP] Embed Pods Frameworks */,
-				62EC8F516045729FC52F4332 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,8 +294,6 @@
 				147B50E3205CEA44001424D2 /* Sources */,
 				147B50E4205CEA44001424D2 /* Frameworks */,
 				147B50E5205CEA44001424D2 /* Resources */,
-				E53A826B878B6E141D8FDD0A /* [CP] Embed Pods Frameworks */,
-				9EB23A7A83C4EE2A12C24313 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,8 +313,6 @@
 				147B50EE205CEA44001424D2 /* Sources */,
 				147B50EF205CEA44001424D2 /* Frameworks */,
 				147B50F0205CEA44001424D2 /* Resources */,
-				CA14BBFEE8A3AB5F3B129A8A /* [CP] Embed Pods Frameworks */,
-				FE11142D8D6DDAAFE812EC83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,6 +379,7 @@
 				147B50DE205CEA44001424D2 /* Assets.xcassets in Resources */,
 				14A724CE2063D16200A9BE47 /* HotPosts.storyboard in Resources */,
 				14E6026D20652242006BAFCF /* UserProfile.storyboard in Resources */,
+				141709F020843958002E7F68 /* SteemGuide.storyboard in Resources */,
 				14E6026B20652233006BAFCF /* Tools.storyboard in Resources */,
 				147B50DC205CEA44001424D2 /* Main.storyboard in Resources */,
 			);
@@ -392,21 +402,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		62EC8F516045729FC52F4332 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		900A99E53FCFCAE0B5156552 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,12 +409,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -465,21 +462,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9EB23A7A83C4EE2A12C24313 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel-ITTests/Pods-Travel-ITTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C21D130176C3A064E0320374 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,51 +478,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA14BBFEE8A3AB5F3B129A8A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel-ITUITests/Pods-Travel-ITUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E53A826B878B6E141D8FDD0A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel-ITTests/Pods-Travel-ITTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE11142D8D6DDAAFE812EC83 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Travel-ITUITests/Pods-Travel-ITUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -563,6 +500,7 @@
 				14E6026F206522C3006BAFCF /* UsefulSteemitToolsVC.swift in Sources */,
 				14E6027520652BBF006BAFCF /* HotPostShowVC.swift in Sources */,
 				14E6027720652C3C006BAFCF /* HotPostsTableCell.swift in Sources */,
+				141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */,
 				14A724D52063DD0400A9BE47 /* BaseColours.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
