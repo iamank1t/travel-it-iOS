@@ -80,7 +80,6 @@ class HotPostsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let storyboard = UIStoryboard(name: "HotPosts", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HotPostShowVC") as! HotPostShowVC
         vc.postData = postData
-        vc.postMainImage = mainImage
         navigationController?.pushViewController(vc,animated: true)
     }
     

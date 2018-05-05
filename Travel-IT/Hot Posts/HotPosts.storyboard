@@ -193,46 +193,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4K-8M-v9T">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-tJ-mPI" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <subviews>
-                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1YX-0c-8z7">
-                                                <rect key="frame" x="20" y="25" width="335" height="180"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="qOk-RB-KZB"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHH-sA-Yoe">
-                                                <rect key="frame" x="5" y="225" width="365" height="22"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="1YX-0c-8z7" firstAttribute="top" secondItem="8ym-tJ-mPI" secondAttribute="top" constant="25" id="8dH-GB-Rsr"/>
-                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WHH-sA-Yoe" secondAttribute="bottom" constant="20" id="CbW-ZI-ljZ"/>
-                                            <constraint firstAttribute="height" priority="250" constant="603" id="Mpw-ZR-vD7"/>
-                                            <constraint firstItem="1YX-0c-8z7" firstAttribute="leading" secondItem="8ym-tJ-mPI" secondAttribute="leading" constant="20" id="Njd-HY-hoy"/>
-                                            <constraint firstItem="WHH-sA-Yoe" firstAttribute="top" secondItem="1YX-0c-8z7" secondAttribute="bottom" constant="20" id="NkY-bc-aAy"/>
-                                            <constraint firstItem="WHH-sA-Yoe" firstAttribute="leading" secondItem="8ym-tJ-mPI" secondAttribute="leading" constant="5" id="Pcy-by-9s0"/>
-                                            <constraint firstAttribute="trailing" secondItem="1YX-0c-8z7" secondAttribute="trailing" constant="20" id="n1A-yu-msi"/>
-                                            <constraint firstAttribute="trailing" secondItem="WHH-sA-Yoe" secondAttribute="trailing" constant="5" id="rLk-HO-roe"/>
-                                            <constraint firstItem="1YX-0c-8z7" firstAttribute="centerX" secondItem="8ym-tJ-mPI" secondAttribute="centerX" id="vvy-cB-Bp4"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="8ym-tJ-mPI" firstAttribute="width" secondItem="x4K-8M-v9T" secondAttribute="width" id="3Qh-fU-zE6"/>
-                                    <constraint firstItem="8ym-tJ-mPI" firstAttribute="leading" secondItem="x4K-8M-v9T" secondAttribute="leading" id="7nI-Xn-jFf"/>
-                                    <constraint firstItem="8ym-tJ-mPI" firstAttribute="centerX" secondItem="x4K-8M-v9T" secondAttribute="centerX" id="9SA-H5-mmV"/>
-                                    <constraint firstAttribute="trailing" secondItem="8ym-tJ-mPI" secondAttribute="trailing" id="EGJ-dv-G6M"/>
-                                    <constraint firstAttribute="bottom" secondItem="8ym-tJ-mPI" secondAttribute="bottom" id="fcK-Sx-BQe"/>
-                                    <constraint firstItem="8ym-tJ-mPI" firstAttribute="top" secondItem="x4K-8M-v9T" secondAttribute="top" id="fcN-kd-HWE"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,15 +200,10 @@
                             <constraint firstItem="x4K-8M-v9T" firstAttribute="top" secondItem="7dM-tC-Hze" secondAttribute="top" id="5G4-05-EEN"/>
                             <constraint firstItem="x4K-8M-v9T" firstAttribute="leading" secondItem="7dM-tC-Hze" secondAttribute="leading" id="AKl-Ob-03q"/>
                             <constraint firstItem="7dM-tC-Hze" firstAttribute="bottom" secondItem="x4K-8M-v9T" secondAttribute="bottom" id="I0I-OE-F7K"/>
-                            <constraint firstItem="8ym-tJ-mPI" firstAttribute="width" secondItem="hlq-KG-HM5" secondAttribute="width" id="PVX-X9-h7R"/>
                             <constraint firstItem="7dM-tC-Hze" firstAttribute="trailing" secondItem="x4K-8M-v9T" secondAttribute="trailing" id="pnP-qR-YhJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7dM-tC-Hze"/>
                     </view>
-                    <connections>
-                        <outlet property="postBodyLabel" destination="WHH-sA-Yoe" id="nZY-PJ-brz"/>
-                        <outlet property="postMainImageView" destination="1YX-0c-8z7" id="Nm5-cn-k1I"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBy-vO-1LY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

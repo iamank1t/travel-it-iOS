@@ -11,7 +11,7 @@ import Down
 import NVActivityIndicatorView
 
 class PostShowVC: UIViewController {
-     private var activityView: NVActivityIndicatorView!
+    private var activityView: NVActivityIndicatorView!
     var postData = [String:AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
