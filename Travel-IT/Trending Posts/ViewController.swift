@@ -18,9 +18,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var dataLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Trending Travel Posts"
+         self.title = "Trending Travel Posts"
         self.travelpostsTableView.delegate = self
         self.travelpostsTableView.dataSource = self
+        travelpostsTableView.estimatedRowHeight = 44
+        travelpostsTableView.rowHeight = UITableViewAutomaticDimension
+        self.travelpostsTableView.reloadData()
+     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.getTredingTravelPosts()
     }
     
@@ -33,7 +40,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("error")
             }else{
                 do{
-                    var json = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String: AnyObject]]
+                    self.allPosts.removeAll()
+                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String: AnyObject]]
                     for post in json {
                         self.allPosts.append(post)
                     }
@@ -58,10 +66,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cellData = self.allPosts[indexPath.row]
         cell?.updateCellData(data: cellData)
         return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 320
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
