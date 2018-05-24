@@ -70,21 +70,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postData = self.allPosts[indexPath.row]
-        let metadata = postData["json_metadata"]! as! String
-        var mainImage: String?
-        let data = metadata.data(using: .utf8)!
-        do {
-            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
-            {
-                if let images = jsonArray["image"] as? [String] {
-                mainImage = images[0]
-            }
-            } else {
-                print("bad json")
-            }
-        } catch let error as NSError {
-            print(error)
-        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PostShowVC") as! PostShowVC
         vc.postData = postData

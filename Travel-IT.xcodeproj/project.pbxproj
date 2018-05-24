@@ -35,6 +35,7 @@
 		2EB6F374AFCD37B268E0BA7B /* Pods_Travel_IT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E094BB8B0A5EB6212CBC3B /* Pods_Travel_IT.framework */; };
 		7307BF747F9CDEE969022D9C /* Pods_Travel_ITTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA610B383F2F8AC9B37B0BD6 /* Pods_Travel_ITTests.framework */; };
 		A12012B856DB71FC4FF8E70A /* Pods_Travel_ITUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C12EDD7E7937C95839A771 /* Pods_Travel_ITUITests.framework */; };
+		BE16DA3120B57A7B00B4CC44 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE16DA3020B57A7B00B4CC44 /* UILabel+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		77E094BB8B0A5EB6212CBC3B /* Pods_Travel_IT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_IT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A14F663D0A9FBA7460D312B /* Pods-Travel-ITTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel-ITTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Travel-ITTests/Pods-Travel-ITTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA610B383F2F8AC9B37B0BD6 /* Pods_Travel_ITTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_ITTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE16DA3020B57A7B00B4CC44 /* UILabel+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		E668B83B38D69F03FE7B7AC2 /* Pods-Travel-ITTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel-ITTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel-ITTests/Pods-Travel-ITTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 		14A724CF2063D1AC00A9BE47 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BE16DA3020B57A7B00B4CC44 /* UILabel+Additions.swift */,
 				14A724D02063D7BA00A9BE47 /* CustomNavigationVC.swift */,
 				14A724D22063DCD100A9BE47 /* CustomTabbarVC.swift */,
 				14A724D42063DD0400A9BE47 /* BaseColours.swift */,
@@ -502,6 +505,7 @@
 				14660727209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift in Sources */,
 				14A724D32063DCD100A9BE47 /* CustomTabbarVC.swift in Sources */,
 				14E6026F206522C3006BAFCF /* UsefulSteemitToolsVC.swift in Sources */,
+				BE16DA3120B57A7B00B4CC44 /* UILabel+Additions.swift in Sources */,
 				14E6027520652BBF006BAFCF /* HotPostShowVC.swift in Sources */,
 				14E6027720652C3C006BAFCF /* HotPostsTableCell.swift in Sources */,
 				141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */,
