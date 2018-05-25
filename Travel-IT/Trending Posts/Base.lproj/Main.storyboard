@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,132 +59,108 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="1" alpha="0.40128930214723929" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostsTableCell" rowHeight="296" id="jV3-qU-d4c" customClass="PostsTableCell" customModule="Travel_IT" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="296"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostsTableCell" rowHeight="206" id="jV3-qU-d4c" customClass="PostsTableCell" customModule="Travel_IT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="206"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jV3-qU-d4c" id="UYU-75-QYv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="296"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mi-om-kyH" customClass="DesignableView" customModule="Travel_IT" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="10" width="290" height="286"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbi-K7-Dnp">
-                                                            <rect key="frame" x="5" y="37" width="280" height="160"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="160" id="hi6-0W-LFv"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKX-y0-IYb">
-                                                            <rect key="frame" x="10" y="207" width="270" height="22"/>
-                                                            <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a17-e7-uMn">
-                                                            <rect key="frame" x="15" y="10" width="35.5" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upvotesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-TV-DbK">
-                                                            <rect key="frame" x="8" y="256" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="PIv-8G-uIf"/>
-                                                                <constraint firstAttribute="height" constant="20" id="rAh-hr-hby"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-Za-wMK">
-                                                            <rect key="frame" x="33" y="257" width="38" height="22"/>
-                                                            <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9x-kp-VXr">
-                                                            <rect key="frame" x="121" y="256" width="38" height="22"/>
-                                                            <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="L0n-hM-xCk">
-                                                            <rect key="frame" x="91" y="255" width="25" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="25" id="AfT-HW-rSl"/>
-                                                                <constraint firstAttribute="height" constant="25" id="cX7-gD-t4j"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commentsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tFZ-qU-ovj">
-                                                            <rect key="frame" x="179" y="255" width="25" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="25" id="Mn8-QK-4le"/>
-                                                                <constraint firstAttribute="height" constant="25" id="mNk-XQ-wBA"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YF-9P-T3j">
-                                                            <rect key="frame" x="209" y="256" width="38" height="22"/>
-                                                            <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.1215686275" green="0.74901960779999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel_placeholder_image" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-b9-18k">
+                                                    <rect key="frame" x="10" y="10" width="200" height="133"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="L0n-hM-xCk" secondAttribute="bottom" constant="6" id="2tj-I2-V8m"/>
-                                                        <constraint firstAttribute="trailing" secondItem="fbi-K7-Dnp" secondAttribute="trailing" constant="5" id="5sF-RD-RVc"/>
-                                                        <constraint firstAttribute="trailing" secondItem="aKX-y0-IYb" secondAttribute="trailing" constant="10" id="5xd-DB-gqg"/>
-                                                        <constraint firstItem="5YF-9P-T3j" firstAttribute="leading" secondItem="tFZ-qU-ovj" secondAttribute="trailing" constant="5" id="9MR-GD-PZW"/>
-                                                        <constraint firstItem="aKX-y0-IYb" firstAttribute="leading" secondItem="1mi-om-kyH" secondAttribute="leading" constant="10" id="E3Z-tH-6Kx"/>
-                                                        <constraint firstItem="fbi-K7-Dnp" firstAttribute="top" secondItem="a17-e7-uMn" secondAttribute="bottom" constant="10" id="FYb-gJ-jCF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="tFZ-qU-ovj" secondAttribute="bottom" constant="6" id="HTj-5V-m0A"/>
-                                                        <constraint firstAttribute="bottom" secondItem="BdW-TV-DbK" secondAttribute="bottom" constant="10" id="IGz-ii-Hg9"/>
-                                                        <constraint firstItem="tFZ-qU-ovj" firstAttribute="leading" secondItem="r9x-kp-VXr" secondAttribute="trailing" constant="20" id="JZd-p9-dhh"/>
-                                                        <constraint firstItem="aKX-y0-IYb" firstAttribute="top" secondItem="fbi-K7-Dnp" secondAttribute="bottom" constant="10" id="OXy-Te-M4c"/>
-                                                        <constraint firstItem="r9x-kp-VXr" firstAttribute="leading" secondItem="L0n-hM-xCk" secondAttribute="trailing" constant="5" id="Pta-Yd-Gt4"/>
-                                                        <constraint firstItem="jq7-Za-wMK" firstAttribute="leading" secondItem="BdW-TV-DbK" secondAttribute="trailing" constant="5" id="RhD-ef-7PS"/>
-                                                        <constraint firstItem="r9x-kp-VXr" firstAttribute="centerY" secondItem="L0n-hM-xCk" secondAttribute="centerY" id="aGT-eQ-45y"/>
-                                                        <constraint firstItem="L0n-hM-xCk" firstAttribute="leading" secondItem="jq7-Za-wMK" secondAttribute="trailing" constant="20" id="hJN-9o-VhV"/>
-                                                        <constraint firstItem="a17-e7-uMn" firstAttribute="top" secondItem="1mi-om-kyH" secondAttribute="top" constant="10" id="kl7-P1-nV1"/>
-                                                        <constraint firstItem="a17-e7-uMn" firstAttribute="leading" secondItem="1mi-om-kyH" secondAttribute="leading" constant="15" id="ngI-WG-4mq"/>
-                                                        <constraint firstItem="fbi-K7-Dnp" firstAttribute="leading" secondItem="1mi-om-kyH" secondAttribute="leading" constant="5" id="rg4-C0-hUX"/>
-                                                        <constraint firstItem="5YF-9P-T3j" firstAttribute="bottom" secondItem="r9x-kp-VXr" secondAttribute="bottom" id="tPM-CL-tUM"/>
-                                                        <constraint firstItem="BdW-TV-DbK" firstAttribute="leading" secondItem="1mi-om-kyH" secondAttribute="leading" constant="8" id="uQe-wu-D0j"/>
-                                                        <constraint firstItem="jq7-Za-wMK" firstAttribute="centerY" secondItem="BdW-TV-DbK" secondAttribute="centerY" constant="2" id="wFF-W1-7A7"/>
+                                                        <constraint firstAttribute="width" secondItem="dQo-b9-18k" secondAttribute="height" multiplier="1883:1253" id="XYc-2a-MbO"/>
+                                                        <constraint firstAttribute="width" constant="200" id="wII-Wn-Qrh"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                            <real key="value" value="15"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                            <real key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                            <size key="value" width="1" height="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                            <color key="value" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animunj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cMV-De-tmO">
+                                                    <rect key="frame" x="220" y="10" width="90" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upvotesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-fj-aZO">
+                                                    <rect key="frame" x="220" y="41" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="7FZ-dP-lvs"/>
+                                                        <constraint firstAttribute="height" constant="30" id="jBA-rV-D1x"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="K2k-YC-96S">
+                                                    <rect key="frame" x="220" y="76" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="5T4-DV-7zD"/>
+                                                        <constraint firstAttribute="height" constant="30" id="psp-T4-wDX"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x1-B7-XMf">
+                                                    <rect key="frame" x="260" y="79.5" width="38" height="22"/>
+                                                    <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" red="0.85490196078431369" green="0.6470588235294118" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox5-Lt-zcU">
+                                                    <rect key="frame" x="260" y="45" width="38" height="22"/>
+                                                    <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" red="0.89411764705882346" green="0.30196078431372547" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commentsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3bl-JS-BTl">
+                                                    <rect key="frame" x="220" y="111" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="I7B-O7-fOe"/>
+                                                        <constraint firstAttribute="width" constant="30" id="bn6-hE-Smw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZn-Tz-xKU">
+                                                    <rect key="frame" x="260" y="114.5" width="38" height="22"/>
+                                                    <fontDescription key="fontDescription" name="KannadaSangamMN-Bold" family="Kannada Sangam MN" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.062745098039215685" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1q-tY-l4m">
+                                                    <rect key="frame" x="10" y="153" width="300" height="43"/>
+                                                    <string key="text">Loren ipsum doller emutLoren ipsum doller emutLoren ipsum doller emutLoren ipsum doller emutLoren ipsum doller emutLoren ipsum doller emut</string>
+                                                    <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="1mi-om-kyH" secondAttribute="trailing" constant="15" id="3ln-xS-bow"/>
-                                                <constraint firstItem="1mi-om-kyH" firstAttribute="leading" secondItem="UYU-75-QYv" secondAttribute="leading" constant="15" id="5XB-Xu-BbL"/>
-                                                <constraint firstAttribute="bottom" secondItem="1mi-om-kyH" secondAttribute="bottom" id="LrM-u5-mfm"/>
-                                                <constraint firstItem="1mi-om-kyH" firstAttribute="top" secondItem="UYU-75-QYv" secondAttribute="top" constant="10" id="Vxx-iN-ufS"/>
+                                                <constraint firstItem="K2k-YC-96S" firstAttribute="leading" secondItem="dQo-b9-18k" secondAttribute="trailing" constant="10" id="02n-rE-SM4"/>
+                                                <constraint firstItem="I1q-tY-l4m" firstAttribute="leading" secondItem="UYU-75-QYv" secondAttribute="leading" constant="10" id="4RS-x7-YFs"/>
+                                                <constraint firstItem="3bl-JS-BTl" firstAttribute="top" secondItem="K2k-YC-96S" secondAttribute="bottom" constant="5" id="9j9-MW-3FA"/>
+                                                <constraint firstItem="3bl-JS-BTl" firstAttribute="leading" secondItem="dQo-b9-18k" secondAttribute="trailing" constant="10" id="B3q-zD-2dR"/>
+                                                <constraint firstItem="7x1-B7-XMf" firstAttribute="leading" secondItem="K2k-YC-96S" secondAttribute="trailing" constant="10" id="FDC-1q-88i"/>
+                                                <constraint firstItem="VZn-Tz-xKU" firstAttribute="centerY" secondItem="3bl-JS-BTl" secondAttribute="centerY" id="GoJ-br-gyZ"/>
+                                                <constraint firstItem="y4c-fj-aZO" firstAttribute="top" secondItem="cMV-De-tmO" secondAttribute="bottom" constant="7" id="LQ2-BD-y2k"/>
+                                                <constraint firstItem="K2k-YC-96S" firstAttribute="top" secondItem="y4c-fj-aZO" secondAttribute="bottom" constant="5" id="OBS-xA-JT8"/>
+                                                <constraint firstItem="I1q-tY-l4m" firstAttribute="top" secondItem="dQo-b9-18k" secondAttribute="bottom" constant="10" id="Oeh-aF-znS"/>
+                                                <constraint firstItem="dQo-b9-18k" firstAttribute="leading" secondItem="UYU-75-QYv" secondAttribute="leading" constant="10" id="PeR-aR-3Sh"/>
+                                                <constraint firstItem="cMV-De-tmO" firstAttribute="leading" secondItem="dQo-b9-18k" secondAttribute="trailing" constant="10" id="RRw-Tx-FS7"/>
+                                                <constraint firstItem="ox5-Lt-zcU" firstAttribute="leading" secondItem="y4c-fj-aZO" secondAttribute="trailing" constant="10" id="UXp-4N-RFm"/>
+                                                <constraint firstItem="ox5-Lt-zcU" firstAttribute="centerY" secondItem="y4c-fj-aZO" secondAttribute="centerY" id="WUg-9v-VES"/>
+                                                <constraint firstAttribute="bottom" secondItem="I1q-tY-l4m" secondAttribute="bottom" constant="10" id="Zq1-hi-E0j"/>
+                                                <constraint firstItem="y4c-fj-aZO" firstAttribute="leading" secondItem="dQo-b9-18k" secondAttribute="trailing" constant="10" id="d5O-qu-BO3"/>
+                                                <constraint firstItem="cMV-De-tmO" firstAttribute="top" secondItem="dQo-b9-18k" secondAttribute="top" id="gUu-sX-QRQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="I1q-tY-l4m" secondAttribute="trailing" constant="10" id="hLW-Kh-PiV"/>
+                                                <constraint firstItem="7x1-B7-XMf" firstAttribute="centerY" secondItem="K2k-YC-96S" secondAttribute="centerY" id="hLm-0b-gTD"/>
+                                                <constraint firstAttribute="trailing" secondItem="cMV-De-tmO" secondAttribute="trailing" constant="10" id="jYO-S0-F7T"/>
+                                                <constraint firstItem="dQo-b9-18k" firstAttribute="top" secondItem="UYU-75-QYv" secondAttribute="top" constant="10" id="rnE-9V-qii"/>
+                                                <constraint firstItem="VZn-Tz-xKU" firstAttribute="leading" secondItem="3bl-JS-BTl" secondAttribute="trailing" constant="10" id="xD1-mc-Cgo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="authorNameLabel" destination="a17-e7-uMn" id="TdF-R3-JDJ"/>
-                                            <outlet property="commentCountLabel" destination="5YF-9P-T3j" id="P0N-VT-p1e"/>
-                                            <outlet property="moneyLabel" destination="r9x-kp-VXr" id="djb-VH-0dW"/>
-                                            <outlet property="postCardView" destination="1mi-om-kyH" id="Ou2-ta-FQl"/>
-                                            <outlet property="postMainImage" destination="fbi-K7-Dnp" id="Tjq-Bn-R2j"/>
-                                            <outlet property="postTitle" destination="aKX-y0-IYb" id="HsS-OZ-HC8"/>
-                                            <outlet property="upvoteCountLabel" destination="jq7-Za-wMK" id="Me7-Ty-44p"/>
+                                            <outlet property="authorNameLabel" destination="cMV-De-tmO" id="Mf0-co-KoV"/>
+                                            <outlet property="commentCountImageVw" destination="3bl-JS-BTl" id="nRG-C9-UDn"/>
+                                            <outlet property="commentCountLabel" destination="VZn-Tz-xKU" id="0b0-o4-BL0"/>
+                                            <outlet property="moneyImageVw" destination="K2k-YC-96S" id="MB6-gK-9wq"/>
+                                            <outlet property="moneyLabel" destination="7x1-B7-XMf" id="Nhm-QS-rdl"/>
+                                            <outlet property="postMainImage" destination="dQo-b9-18k" id="OQy-Hd-ASz"/>
+                                            <outlet property="postTitle" destination="I1q-tY-l4m" id="6VE-2Q-yUJ"/>
+                                            <outlet property="upvoteCountImageVw" destination="y4c-fj-aZO" id="6x4-ru-rEt"/>
+                                            <outlet property="upvoteCountLabel" destination="ox5-Lt-zcU" id="GWW-WB-qRQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -276,8 +253,9 @@
         <image name="Trending Travel Posts" width="30" height="30"/>
         <image name="Useful Tools" width="28" height="28"/>
         <image name="User Profile" width="28" height="28"/>
-        <image name="commentsIcon" width="512" height="512"/>
-        <image name="moneyIcon" width="512" height="512"/>
-        <image name="upvotesIcon" width="512" height="512"/>
+        <image name="commentsIcon" width="30" height="30"/>
+        <image name="moneyIcon" width="30" height="30"/>
+        <image name="travel_placeholder_image" width="1880" height="1253"/>
+        <image name="upvotesIcon" width="30" height="30"/>
     </resources>
 </document>
