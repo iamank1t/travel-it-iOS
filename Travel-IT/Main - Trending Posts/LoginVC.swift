@@ -8,13 +8,14 @@
 
 import UIKit
 import WebKit
+import NVActivityIndicatorView
 
 protocol WKDelegateController:WKScriptMessageHandler {
     
 }
 
 class LoginVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
-    
+    private var activityView: NVActivityIndicatorView!
    @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var cancelBtn: UIButton!
     
@@ -45,6 +46,7 @@ class LoginVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let configuration = WKWebViewConfiguration()
         let userContentController = WKUserContentController()
         configuration.userContentController = userContentController
+        self.showLoadingIndicator()
         webview?.load(URLRequest.init(url: URL.init(string: get_login_url)!))
         webview?.uiDelegate = self;
         webview?.navigationDelegate = self
@@ -66,7 +68,11 @@ class LoginVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
+        self.stopLoadingIndicator()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.stopLoadingIndicator()
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -93,6 +99,7 @@ class LoginVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
     @IBAction func loginViaSteemConnectPressed(_ sender: Any) {
         
     }
+    
     
     //MARK: - ItemOnClick
     @objc func navigateUserInsideApp() {
@@ -124,4 +131,25 @@ class LoginVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
             try!FileManager.default.removeItem(atPath: cookiesPath)
         }
     }
+    
+    func showLoadingIndicator(){
+        if activityView == nil{
+            activityView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50.0, height: 50.0), type: NVActivityIndicatorType.ballClipRotatePulse, color: UIColor.loaderColor, padding: 0.0)
+            activityView.backgroundColor = UIColor.white
+            // add subview
+            view.addSubview(activityView)
+            // autoresizing mask
+            activityView.translatesAutoresizingMaskIntoConstraints = false
+            // constraints
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+            view.addConstraint(NSLayoutConstraint(item: activityView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        }
+        
+        activityView.startAnimating()
+    }
+    
+    func stopLoadingIndicator(){
+        activityView.stopAnimating()
+    }
+    
 }
