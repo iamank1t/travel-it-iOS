@@ -10,22 +10,18 @@ import UIKit
 import SDWebImage
 class HotPostsTableCell: UITableViewCell {
     
-    @IBOutlet var hotPostCellMainView: UIView!
     @IBOutlet var postMainImage: UIImageView!
     @IBOutlet var postTitle: UILabel!
     @IBOutlet var authorNameLabel: UILabel!
     @IBOutlet var postCommentsCountLabel: UILabel!
     @IBOutlet var postMoneyLabel: UILabel!
     @IBOutlet var postUpvotesCountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.hotPostCellMainView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.hotPostCellMainView.layer.shadowColor = UIColor.black.cgColor
-        self.hotPostCellMainView.layer.shadowRadius = 4
-        self.hotPostCellMainView.layer.shadowOpacity = 0.25
-        self.hotPostCellMainView.layer.masksToBounds = false;
-        self.hotPostCellMainView.clipsToBounds = false;
-    }
+        self.authorNameLabel.addShadowWith(shadowOffset: CGSize(width: 5, height: 5), shadowOpacity: 5.0, shadowRadius: 12.0)
+        self.postTitle.addShadowWith(shadowOffset: CGSize(width: 5, height: 5), shadowOpacity: 5.0, shadowRadius: 12.0)
+     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -36,7 +32,9 @@ class HotPostsTableCell: UITableViewCell {
     // function to update single cell data
     func updateCellData(data: [String: AnyObject]) {
         self.postTitle.text = data["title"]! as? String
-        self.authorNameLabel.text = data["author"] as? String
+        if let author = data["author"] as? String {
+            self.authorNameLabel.text = "By : \(author)"
+        }
         let upvotesCount = data["net_votes"] as? Int
         self.postUpvotesCountLabel.text = "\(upvotesCount ?? 0)"
         let commentsCount = data["children"] as? Int
