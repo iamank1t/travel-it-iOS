@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhq-Hb-YXe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mPr-zW-6gq">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,6 +26,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZrM-tl-3F2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-463" y="-230"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="da1-9s-55t">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mPr-zW-6gq" customClass="MainVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RJy-WW-sGe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hso-6Q-Ai8">
+                                <rect key="frame" x="30" y="259" width="260" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.6705882353" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="9iH-CL-0rl"/>
+                                    <constraint firstAttribute="height" constant="50" id="skv-aD-dG3"/>
+                                </constraints>
+                                <state key="normal" title="Login Via Steemconnect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="mPr-zW-6gq" eventType="touchUpInside" id="8iG-ry-pvs"/>
+                                    <segue destination="0mi-IS-its" kind="show" identifier="showLoginVC" id="Z7Q-S0-dq9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hso-6Q-Ai8" firstAttribute="centerY" secondItem="RJy-WW-sGe" secondAttribute="centerY" id="Mb6-nr-LBd"/>
+                            <constraint firstItem="hso-6Q-Ai8" firstAttribute="centerX" secondItem="RJy-WW-sGe" secondAttribute="centerX" id="sgc-ia-iYP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kd2-GU-pEA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7H-K4-eq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1145" y="-928"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="HHp-KK-tV2">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0mi-IS-its" customClass="LoginVC" customModule="Travel_IT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r1Z-Vi-DaX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBD-jl-zWm">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqR-nL-JDW">
+                                <rect key="frame" x="20" y="30" width="50" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="PdR-um-ilb"/>
+                                    <constraint firstAttribute="width" constant="50" id="tef-wm-aSU"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnAction:" destination="0mi-IS-its" eventType="touchUpInside" id="S2f-Vz-2vX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3dd-n2-o7B" firstAttribute="bottom" secondItem="XBD-jl-zWm" secondAttribute="bottom" id="AmO-zc-3DO"/>
+                            <constraint firstItem="zqR-nL-JDW" firstAttribute="top" secondItem="3dd-n2-o7B" secondAttribute="top" constant="10" id="JzX-ma-3jr"/>
+                            <constraint firstItem="3dd-n2-o7B" firstAttribute="trailing" secondItem="XBD-jl-zWm" secondAttribute="trailing" id="bHB-5J-689"/>
+                            <constraint firstItem="XBD-jl-zWm" firstAttribute="leading" secondItem="3dd-n2-o7B" secondAttribute="leading" id="ji9-RY-LiN"/>
+                            <constraint firstItem="zqR-nL-JDW" firstAttribute="leading" secondItem="3dd-n2-o7B" secondAttribute="leading" constant="20" id="mwP-FC-twC"/>
+                            <constraint firstItem="XBD-jl-zWm" firstAttribute="top" secondItem="3dd-n2-o7B" secondAttribute="top" id="onE-mQ-NOa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3dd-n2-o7B"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="zqR-nL-JDW" id="Qrt-jA-KcN"/>
+                        <outlet property="webview" destination="XBD-jl-zWm" id="Lke-dV-8m0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RN2-ME-sfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-929"/>
         </scene>
         <!--Custom TabbarVC-->
         <scene sceneID="pY4-3h-eEX">

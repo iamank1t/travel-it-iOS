@@ -15,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if let _ = UserDefaults.standard.value(forKey: UserDataSaveConstants.st_access_token_save) as? String {
+            if let token_expire_interval = UserDefaults.standard.value(forKey: UserDataSaveConstants.st_expires_in_save) as? String {
+                if let token_expire_interval_intVal = Int(token_expire_interval) {
+                    let date_with_token_expire_interval = Date.init(timeIntervalSinceNow: TimeInterval(token_expire_interval_intVal))
+                    let todayDate = Date()
+                    if todayDate < date_with_token_expire_interval {
+                        self.navigateUserInsideApp()
+                    }
+                }
+            }
+        }
         // Override point for customization after application launch.
         return true
     }
@@ -39,6 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func navigateUserInsideApp() {
+        let tabBarController = self.window?.rootViewController?.storyboard?.instantiateViewController(withIdentifier: "CustomTabbarVC")
+        self.window?.rootViewController = tabBarController
     }
 
 

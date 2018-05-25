@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		141709F020843958002E7F68 /* SteemGuide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141709EF20843958002E7F68 /* SteemGuide.storyboard */; };
 		141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141709F1208439AC002E7F68 /* SteemGuidVC.swift */; };
+		144480C020B806E000047E49 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480BF20B806E000047E49 /* MainVC.swift */; };
+		144480C220B8096300047E49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C120B8096300047E49 /* LoginVC.swift */; };
+		144480C520B80B7400047E49 /* StoryboardInstantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C420B80B7400047E49 /* StoryboardInstantiation.swift */; };
+		144480C720B80B9D00047E49 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C620B80B9D00047E49 /* DataManager.swift */; };
+		144480C920B80BCF00047E49 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C820B80BCF00047E49 /* Client.swift */; };
+		144480CB20B80C7300047E49 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480CA20B80C7300047E49 /* UILabel+Additions.swift */; };
 		14660727209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */; };
 		147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D6205CEA44001424D2 /* AppDelegate.swift */; };
 		147B50D9205CEA44001424D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D8205CEA44001424D2 /* ViewController.swift */; };
@@ -58,6 +64,12 @@
 		0414ED727009D50E6981CC27 /* Pods-Travel-IT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel-IT.release.xcconfig"; path = "Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT.release.xcconfig"; sourceTree = "<group>"; };
 		141709EF20843958002E7F68 /* SteemGuide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SteemGuide.storyboard; sourceTree = "<group>"; };
 		141709F1208439AC002E7F68 /* SteemGuidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteemGuidVC.swift; sourceTree = "<group>"; };
+		144480BF20B806E000047E49 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		144480C120B8096300047E49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		144480C420B80B7400047E49 /* StoryboardInstantiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiation.swift; sourceTree = "<group>"; };
+		144480C620B80B9D00047E49 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		144480C820B80BCF00047E49 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		144480CA20B80C7300047E49 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
 		14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVotingPowerCalculatorVC.swift; sourceTree = "<group>"; };
 		147B50D3205CEA44001424D2 /* Travel-IT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel-IT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B50D6205CEA44001424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +146,16 @@
 			path = "Steem Guide";
 			sourceTree = "<group>";
 		};
+		144480C320B80B4600047E49 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				144480C420B80B7400047E49 /* StoryboardInstantiation.swift */,
+				144480C620B80B9D00047E49 /* DataManager.swift */,
+				144480C820B80BCF00047E49 /* Client.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		147B50CA205CEA44001424D2 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +181,8 @@
 		147B50D5205CEA44001424D2 /* Travel-IT */ = {
 			isa = PBXGroup;
 			children = (
-				14A724CA2063D0F600A9BE47 /* Trending Posts */,
+				144480C320B80B4600047E49 /* Helpers */,
+				14A724CA2063D0F600A9BE47 /* Main - Trending Posts */,
 				14A724CC2063D13400A9BE47 /* Hot Posts */,
 				14E602682065220A006BAFCF /* Tools */,
 				14E6026920652219006BAFCF /* User */,
@@ -191,15 +214,17 @@
 			path = "Travel-ITUITests";
 			sourceTree = "<group>";
 		};
-		14A724CA2063D0F600A9BE47 /* Trending Posts */ = {
+		14A724CA2063D0F600A9BE47 /* Main - Trending Posts */ = {
 			isa = PBXGroup;
 			children = (
 				147B50DA205CEA44001424D2 /* Main.storyboard */,
 				147B50D8205CEA44001424D2 /* ViewController.swift */,
 				147B5106205D6106001424D2 /* PostShowVC.swift */,
 				147B5104205CFD1A001424D2 /* PostsTableCell.swift */,
+				144480BF20B806E000047E49 /* MainVC.swift */,
+				144480C120B8096300047E49 /* LoginVC.swift */,
 			);
-			path = "Trending Posts";
+			path = "Main - Trending Posts";
 			sourceTree = "<group>";
 		};
 		14A724CC2063D13400A9BE47 /* Hot Posts */ = {
@@ -220,6 +245,7 @@
 				14A724D22063DCD100A9BE47 /* CustomTabbarVC.swift */,
 				14A724D42063DD0400A9BE47 /* BaseColours.swift */,
 				14E6027E2067B6A5006BAFCF /* UIView+Properties.swift */,
+				144480CA20B80C7300047E49 /* UILabel+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,10 +517,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A724D12063D7BA00A9BE47 /* CustomNavigationVC.swift in Sources */,
+				144480C720B80B9D00047E49 /* DataManager.swift in Sources */,
+				144480CB20B80C7300047E49 /* UILabel+Additions.swift in Sources */,
+				144480C020B806E000047E49 /* MainVC.swift in Sources */,
+				144480C520B80B7400047E49 /* StoryboardInstantiation.swift in Sources */,
 				147B50D9205CEA44001424D2 /* ViewController.swift in Sources */,
 				14E6027320652A5D006BAFCF /* HotPostsListVC.swift in Sources */,
 				14E6027F2067B6A5006BAFCF /* UIView+Properties.swift in Sources */,
 				147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */,
+				144480C920B80BCF00047E49 /* Client.swift in Sources */,
 				14B0B8C8207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift in Sources */,
 				147B5105205CFD1A001424D2 /* PostsTableCell.swift in Sources */,
 				147B5107205D6106001424D2 /* PostShowVC.swift in Sources */,
@@ -503,6 +534,7 @@
 				14A724D32063DCD100A9BE47 /* CustomTabbarVC.swift in Sources */,
 				14E6026F206522C3006BAFCF /* UsefulSteemitToolsVC.swift in Sources */,
 				14E6027520652BBF006BAFCF /* HotPostShowVC.swift in Sources */,
+				144480C220B8096300047E49 /* LoginVC.swift in Sources */,
 				14E6027720652C3C006BAFCF /* HotPostsTableCell.swift in Sources */,
 				141709F2208439AC002E7F68 /* SteemGuidVC.swift in Sources */,
 				14A724D52063DD0400A9BE47 /* BaseColours.swift in Sources */,
