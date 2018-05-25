@@ -18,16 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var dataLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.title = "Trending Travel Posts"
+        self.title = "Trending Travel Posts"
         self.travelpostsTableView.delegate = self
         self.travelpostsTableView.dataSource = self
-        travelpostsTableView.estimatedRowHeight = 44
-        travelpostsTableView.rowHeight = UITableViewAutomaticDimension
-        self.travelpostsTableView.reloadData()
-     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.getTredingTravelPosts()
     }
     
@@ -40,8 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("error")
             }else{
                 do{
-                    self.allPosts.removeAll()
-                    let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String: AnyObject]]
+                    var json = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String: AnyObject]]
                     for post in json {
                         self.allPosts.append(post)
                     }
@@ -68,8 +60,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 320
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postData = self.allPosts[indexPath.row]
+        let metadata = postData["json_metadata"]! as! String
+        var mainImage: String?
+        let data = metadata.data(using: .utf8)!
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
+            {
+                if let images = jsonArray["image"] as? [String] {
+                mainImage = images[0]
+            }
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PostShowVC") as! PostShowVC
         vc.postData = postData

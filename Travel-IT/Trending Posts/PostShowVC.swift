@@ -15,7 +15,6 @@ class PostShowVC: UIViewController {
     var postData = [String:AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.populatePostData()
         // Do any additional setup after loading the view.
     }

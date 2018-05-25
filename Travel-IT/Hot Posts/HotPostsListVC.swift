@@ -11,22 +11,17 @@ import SwiftyJSON
 import NVActivityIndicatorView
 
 class HotPostsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+     private var activityView: NVActivityIndicatorView!
     @IBOutlet var hotTravelpostsTableView: UITableView!
-    private var activityView: NVActivityIndicatorView!
-    
     var allPosts = [[String: AnyObject]]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Hot Travel Posts"
         self.hotTravelpostsTableView.delegate = self
         self.hotTravelpostsTableView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.getHotTravelPosts()
     }
+    
     func getHotTravelPosts() {
         self.showLoadingIndicator()
         let url = URL(string: "https://api.steemjs.com/get_discussions_by_hot?query=%7B%22tag%22%3A%22travel%22%2C%20%22limit%22%3A%20%2210%22%7D")!
@@ -63,25 +58,25 @@ class HotPostsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 320
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postData = self.allPosts[indexPath.row]
-        //let metadata = postData["json_metadata"]! as! String
-        //        var mainImage: String?
-        //        let data = metadata.data(using: .utf8)!
-        //        do {
-        //            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
-        //            {
-        //                let images = jsonArray["image"] as! [String]
-        //                mainImage = images[0]
-        //            } else {
-        //                print("bad json")
-        //            }
-        //        } catch let error as NSError {
-        //            print(error)
-        //        }
+        let metadata = postData["json_metadata"]! as! String
+        var mainImage: String?
+        let data = metadata.data(using: .utf8)!
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String:AnyObject]
+            {
+                let images = jsonArray["image"] as! [String]
+                mainImage = images[0]
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
         let storyboard = UIStoryboard(name: "HotPosts", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HotPostShowVC") as! HotPostShowVC
         vc.postData = postData
