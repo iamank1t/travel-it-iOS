@@ -15,6 +15,7 @@
 		144480C720B80B9D00047E49 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C620B80B9D00047E49 /* DataManager.swift */; };
 		144480C920B80BCF00047E49 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480C820B80BCF00047E49 /* Client.swift */; };
 		144480CB20B80C7300047E49 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480CA20B80C7300047E49 /* UILabel+Additions.swift */; };
+		144480CD20B9376400047E49 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144480CC20B9376400047E49 /* NetworkTools.swift */; };
 		14660727209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */; };
 		147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D6205CEA44001424D2 /* AppDelegate.swift */; };
 		147B50D9205CEA44001424D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147B50D8205CEA44001424D2 /* ViewController.swift */; };
@@ -70,6 +71,7 @@
 		144480C620B80B9D00047E49 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		144480C820B80BCF00047E49 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		144480CA20B80C7300047E49 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Additions.swift"; sourceTree = "<group>"; };
+		144480CC20B9376400047E49 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		14660726209DC9C800EAAF4F /* CurrentVotingPowerCalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentVotingPowerCalculatorVC.swift; sourceTree = "<group>"; };
 		147B50D3205CEA44001424D2 /* Travel-IT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel-IT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		147B50D6205CEA44001424D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				144480C420B80B7400047E49 /* StoryboardInstantiation.swift */,
 				144480C620B80B9D00047E49 /* DataManager.swift */,
 				144480C820B80BCF00047E49 /* Client.swift */,
+				144480CC20B9376400047E49 /* NetworkTools.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -438,6 +441,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Travel-IT/Pods-Travel-IT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Down/Down.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -445,6 +450,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Down.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -526,6 +533,7 @@
 				14E6027F2067B6A5006BAFCF /* UIView+Properties.swift in Sources */,
 				147B50D7205CEA44001424D2 /* AppDelegate.swift in Sources */,
 				144480C920B80BCF00047E49 /* Client.swift in Sources */,
+				144480CD20B9376400047E49 /* NetworkTools.swift in Sources */,
 				14B0B8C8207F8202007CD973 /* VotingPowerRechargeTimeCalculatorVC.swift in Sources */,
 				147B5105205CFD1A001424D2 /* PostsTableCell.swift in Sources */,
 				147B5107205D6106001424D2 /* PostShowVC.swift in Sources */,

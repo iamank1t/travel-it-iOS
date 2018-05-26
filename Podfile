@@ -10,6 +10,8 @@ target 'Travel-IT' do
     pod 'SDWebImage', '~> 4.0'
     pod 'NVActivityIndicatorView'
     pod 'Down'
+    pod 'AFNetworking'
+    pod 'Alamofire'
   target 'Travel-ITTests' do
     inherit! :search_paths
     # Pods for testing

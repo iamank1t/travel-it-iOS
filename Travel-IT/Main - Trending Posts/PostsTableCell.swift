@@ -10,6 +10,7 @@ import UIKit
 import SDWebImage
 class PostsTableCell: UITableViewCell {
     
+    @IBOutlet var upvoteButton: UIButton!
     @IBOutlet var commentCountImageVw: UIImageView!
     @IBOutlet var moneyImageVw: UIImageView!
     @IBOutlet var upvoteCountImageVw: UIImageView!

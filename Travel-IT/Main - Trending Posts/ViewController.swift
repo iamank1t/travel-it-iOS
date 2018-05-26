@@ -64,9 +64,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "PostsTableCell", for: indexPath) as? PostsTableCell
         let cellData = self.allPosts[indexPath.row]
+        cell?.upvoteButton.tag = indexPath.row
+        cell?.upvoteButton.addTarget(self, action: #selector(upvoteButtonClicked), for: .touchUpInside)
         cell?.updateCellData(data: cellData)
         return cell!
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let postData = self.allPosts[indexPath.row]
@@ -90,6 +93,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         vc.postData = postData
         navigationController?.pushViewController(vc,animated: true)
     }
+    
+    
+    
+    @objc func upvoteButtonClicked(sender: UIButton) {
+        let data = self.allPosts[sender.tag]
+        let idx = sender.tag
+        let author = data["author"]!
+        let permlink = data["permlink"]!
+        STClient.vote(voter: DataManager.sharedInstance.getUserName(), author: author as! String, permlink: permlink as! String, weight: 10000, to:nil) { (response, error) in
+            if error == nil && idx == sender.tag{
+                self.getTredingTravelPosts()
+            }
+        }
+        
+    }
+    
     
     func showLoadingIndicator(){
         if activityView == nil{
