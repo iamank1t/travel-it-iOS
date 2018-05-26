@@ -64,8 +64,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "PostsTableCell", for: indexPath) as? PostsTableCell
         let cellData = self.allPosts[indexPath.row]
+        let login = DataManager.sharedInstance.isLogin() as? Bool
+        if login! {
         cell?.upvoteButton.tag = indexPath.row
         cell?.upvoteButton.addTarget(self, action: #selector(upvoteButtonClicked), for: .touchUpInside)
+        }
         cell?.updateCellData(data: cellData)
         return cell!
     }
