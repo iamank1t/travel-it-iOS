@@ -1,5 +1,5 @@
 # Travel-it iOS
-Travel-It is an open source iOS made for Steemit travel bloggers. It keeps you updated with trending posts in travel category. This app is created for minnows who used travel niche on Steemit. Using this app users can learn writing tactics from trending travel posts.
+Travel-It is an open source iOS made for Steemit travel bloggers. It keeps you updated with trending posts in travel category. This app is created for minnows who used travel niche on Steemit. Using this app users can learn writing tactics from trending travel posts. 
 
 ![alt text](https://media.giphy.com/media/5hb5fOl6yJJES0LAVX/giphy.gif)
 
@@ -10,18 +10,25 @@ Currently Travel-it is in it's early phase, in early phase Travel-it provides yo
 
 # Features added in upcoming days :-
 I will add some of these features immediately in app, maybe in one week or less.
+- Launch SMT Token.
+- Make upvote system withing app, so that when users make their travel post from app they will get and extra upvote from travel-it bot to promote them.
 - ~~Activity Loader~~
 - ~~Nice Logo~~
 - Well improved UI
 - Improved UX
 - Show posts with date and upvotes.
-- Showing all images of posts, currently it's showing only one image.
+- ~~Showing all images of posts, currently it's showing only one image.~~
 - ~~Top 10 posts from Hot section.~~
-- Steemconnect Login for users.
+- ~~Steemconnect Login for users.~~
 - Users can upvote, comment their favourite posts directly from app.
 - Users can see authors Steemit profile in app.
 - Users can see their Steemit profile in app.
 - And much more!
+
+# Travel-it Team
+- [iamankit](www.steemit.com/@iamankit) - CEO and Development Lead
+- [Dcrazy](www.steemit.com/@dcrazy) - CEO and Project Manager
+- [Doctorvee](www.steemit.com/@doctorvee) - Marketing Lead
 
 # Running and Development
 
