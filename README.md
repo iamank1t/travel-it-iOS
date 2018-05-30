@@ -1,7 +1,8 @@
 # Travel-it iOS
-Travel-It is an open source iOS made for Steemit travel bloggers. It keeps you updated with trending posts in travel category. This app is created for minnows who used travel niche on Steemit. Using this app users can learn writing tactics from trending travel posts. 
+Travel-It is an open source iOS made for Steemit travel bloggers. It keeps you updated with trending posts in travel category. This app is created for minnows who used travel niche on Steemit. Using this app users can learn writing tactics from trending travel posts.
 
-![alt text](https://media.giphy.com/media/5hb5fOl6yJJES0LAVX/giphy.gif)
+![alt text](https://cdn.steemitimages.com/0x0/https://cdn.steemitimages.com/DQmW3P9jBe8BJdzjV49Vv7setsqgGZUyqPmJpaPVDuxiV4V/ezgif.com-video-to-gif%20(1).gif)
+
 
 # Current Features
 Currently Travel-it is in it's early phase, in early phase Travel-it provides you following details :-
